@@ -13,6 +13,19 @@
 		BE697C03212318FE005102C5 /* Contatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE697C01212318FE005102C5 /* Contatos.xcdatamodeld */; };
 		BE697C05212318FF005102C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE697C04212318FF005102C5 /* Assets.xcassets */; };
 		BE697C08212318FF005102C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE697C06212318FF005102C5 /* LaunchScreen.storyboard */; };
+		BE697C112126EA48005102C5 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C0F2126EA48005102C5 /* UserCell.swift */; };
+		BE697C122126EA48005102C5 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE697C102126EA48005102C5 /* UserCell.xib */; };
+		BE697C152126EDBD005102C5 /* ContatoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C132126EDBD005102C5 /* ContatoCell.swift */; };
+		BE697C162126EDBD005102C5 /* ContatoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE697C142126EDBD005102C5 /* ContatoCell.xib */; };
+		BE697C182126EF9C005102C5 /* VisualizarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C172126EF9C005102C5 /* VisualizarContatoViewController.swift */; };
+		BE697C1A2126EFD1005102C5 /* AdicionarContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C192126EFD1005102C5 /* AdicionarContatoViewController.swift */; };
+		BE697C1C2126F011005102C5 /* CriarUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C1B2126F011005102C5 /* CriarUserViewController.swift */; };
+		BE697C1E2126F032005102C5 /* ContatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C1D2126F032005102C5 /* ContatosViewController.swift */; };
+		BE697C21212708EF005102C5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C20212708EF005102C5 /* DataManager.swift */; };
+		BE697C60212AEB59005102C5 /* Usuario+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C5E212AEB59005102C5 /* Usuario+CoreDataProperties.swift */; };
+		BE697C61212AEB59005102C5 /* Contato+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C5F212AEB59005102C5 /* Contato+CoreDataProperties.swift */; };
+		BE697C63212AEBB8005102C5 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C62212AEBB8005102C5 /* Usuario.swift */; };
+		BE697C65212AEBE6005102C5 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE697C64212AEBE6005102C5 /* Contato.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		BE697C04212318FF005102C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE697C07212318FF005102C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE697C09212318FF005102C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE697C0F2126EA48005102C5 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		BE697C102126EA48005102C5 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		BE697C132126EDBD005102C5 /* ContatoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoCell.swift; sourceTree = "<group>"; };
+		BE697C142126EDBD005102C5 /* ContatoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContatoCell.xib; sourceTree = "<group>"; };
+		BE697C172126EF9C005102C5 /* VisualizarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarContatoViewController.swift; sourceTree = "<group>"; };
+		BE697C192126EFD1005102C5 /* AdicionarContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarContatoViewController.swift; sourceTree = "<group>"; };
+		BE697C1B2126F011005102C5 /* CriarUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUserViewController.swift; sourceTree = "<group>"; };
+		BE697C1D2126F032005102C5 /* ContatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosViewController.swift; sourceTree = "<group>"; };
+		BE697C20212708EF005102C5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BE697C5E212AEB59005102C5 /* Usuario+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE697C5F212AEB59005102C5 /* Contato+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contato+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE697C62212AEBB8005102C5 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		BE697C64212AEBE6005102C5 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,44 @@
 		BE697BF9212318FE005102C5 /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				BE697C22212708FA005102C5 /* Model */,
+				BE697C1F2126F039005102C5 /* Controllers */,
 				BE697BFA212318FE005102C5 /* AppDelegate.swift */,
-				BE697BFC212318FE005102C5 /* ViewController.swift */,
 				BE697BFE212318FE005102C5 /* Main.storyboard */,
 				BE697C04212318FF005102C5 /* Assets.xcassets */,
 				BE697C06212318FF005102C5 /* LaunchScreen.storyboard */,
 				BE697C09212318FF005102C5 /* Info.plist */,
 				BE697C01212318FE005102C5 /* Contatos.xcdatamodeld */,
+				BE697C0F2126EA48005102C5 /* UserCell.swift */,
+				BE697C102126EA48005102C5 /* UserCell.xib */,
+				BE697C132126EDBD005102C5 /* ContatoCell.swift */,
+				BE697C142126EDBD005102C5 /* ContatoCell.xib */,
 			);
 			path = Contatos;
+			sourceTree = "<group>";
+		};
+		BE697C1F2126F039005102C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE697C1D2126F032005102C5 /* ContatosViewController.swift */,
+				BE697C172126EF9C005102C5 /* VisualizarContatoViewController.swift */,
+				BE697C192126EFD1005102C5 /* AdicionarContatoViewController.swift */,
+				BE697C1B2126F011005102C5 /* CriarUserViewController.swift */,
+				BE697BFC212318FE005102C5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE697C22212708FA005102C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE697C64212AEBE6005102C5 /* Contato.swift */,
+				BE697C62212AEBB8005102C5 /* Usuario.swift */,
+				BE697C5E212AEB59005102C5 /* Usuario+CoreDataProperties.swift */,
+				BE697C5F212AEB59005102C5 /* Contato+CoreDataProperties.swift */,
+				BE697C20212708EF005102C5 /* DataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE697C122126EA48005102C5 /* UserCell.xib in Resources */,
+				BE697C162126EDBD005102C5 /* ContatoCell.xib in Resources */,
 				BE697C08212318FF005102C5 /* LaunchScreen.storyboard in Resources */,
 				BE697C05212318FF005102C5 /* Assets.xcassets in Resources */,
 				BE697C00212318FE005102C5 /* Main.storyboard in Resources */,
@@ -138,9 +195,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE697C65212AEBE6005102C5 /* Contato.swift in Sources */,
+				BE697C63212AEBB8005102C5 /* Usuario.swift in Sources */,
+				BE697C112126EA48005102C5 /* UserCell.swift in Sources */,
+				BE697C21212708EF005102C5 /* DataManager.swift in Sources */,
+				BE697C1A2126EFD1005102C5 /* AdicionarContatoViewController.swift in Sources */,
+				BE697C1E2126F032005102C5 /* ContatosViewController.swift in Sources */,
+				BE697C182126EF9C005102C5 /* VisualizarContatoViewController.swift in Sources */,
 				BE697BFD212318FE005102C5 /* ViewController.swift in Sources */,
+				BE697C60212AEB59005102C5 /* Usuario+CoreDataProperties.swift in Sources */,
+				BE697C152126EDBD005102C5 /* ContatoCell.swift in Sources */,
+				BE697C61212AEB59005102C5 /* Contato+CoreDataProperties.swift in Sources */,
 				BE697BFB212318FE005102C5 /* AppDelegate.swift in Sources */,
 				BE697C03212318FE005102C5 /* Contatos.xcdatamodeld in Sources */,
+				BE697C1C2126F011005102C5 /* CriarUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

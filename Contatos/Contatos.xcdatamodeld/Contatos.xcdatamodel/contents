@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Contato" representedClassName="Contato" syncable="YES" codeGenerationType="class">
+    <entity name="Contato" representedClassName=".Contato" syncable="YES">
         <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="newRelationship" inverseEntity="Usuario" syncable="YES"/>
+        <relationship name="usuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="contatos" inverseEntity="Usuario" syncable="YES"/>
     </entity>
-    <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
+    <entity name="Usuario" representedClassName=".Usuario" syncable="YES">
         <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contato" inverseName="newRelationship" inverseEntity="Contato" syncable="YES"/>
+        <relationship name="contatos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contato" inverseName="usuario" inverseEntity="Contato" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Usuario" positionX="-468" positionY="639" width="128" height="103"/>
-        <element name="Contato" positionX="-252" positionY="639" width="128" height="103"/>
+        <element name="Contato" positionX="-252" positionY="639" width="128" height="105"/>
+        <element name="Usuario" positionX="-468" positionY="639" width="128" height="105"/>
     </elements>
 </model>
