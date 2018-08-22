@@ -13,6 +13,8 @@ class ContatosViewController: UIViewController {
 
     var usuario: Usuario?
     var contato: Contato?
+    var wasEdit: Int = -1
+
     var contaosArray = [Contato]()
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,6 +34,7 @@ class ContatosViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        wasEdit = -1
         contaosArray = getContatos()
         tableView.reloadData()
     }
@@ -47,7 +50,13 @@ class ContatosViewController: UIViewController {
 
             if dest.topViewController is AdicionarContatoViewController {
                 let us = dest.topViewController as! AdicionarContatoViewController
-                us.usuario = sender as! Usuario
+                if wasEdit != -1{
+                    us.contato = contaosArray[wasEdit]
+                    
+                }else{
+                    us.usuario = sender as! Usuario
+                }
+
                 
             }
         }else {
@@ -100,11 +109,36 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete{
+//            let context = DataManager.getContext()
+//            let contato = self.contaosArray[indexPath.row]
+//            context.delete(contato)
+//
+//            self.contaosArray.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//
+//            do {
+//                try context.save()
+//            }catch {
+//                print("Deu merda")
+//            }
+//        }
+//
+//    }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
+            self.wasEdit = indexPath.row
+            print(self.wasEdit)
+            self.performSegue(withIdentifier: "addContato", sender: self.usuario)
 
-        if editingStyle == .delete {
+        }
+        editAction.backgroundColor = .blue
+
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (rowAction, indexPath) in
+
             let context = DataManager.getContext()
-            let contato = contaosArray[indexPath.row]
+            let contato = self.contaosArray[indexPath.row]
             context.delete(contato)
 
             self.contaosArray.remove(at: indexPath.row)
@@ -116,5 +150,7 @@ extension ContatosViewController: UITableViewDelegate, UITableViewDataSource {
                 print("Deu merda")
             }
         }
+
+        return [editAction, deleteAction]
     }
 }

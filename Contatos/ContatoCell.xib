@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,25 +21,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-RO-SBM">
-                        <rect key="frame" x="8" y="10" width="44" height="44"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-RO-SBM">
+                        <rect key="frame" x="8" y="10" width="57.5" height="46"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yus-bJ-uc8">
-                        <rect key="frame" x="60" y="10" width="49" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yus-bJ-uc8">
+                        <rect key="frame" x="73" y="11" width="49" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwX-Tx-YAk">
-                        <rect key="frame" x="60" y="35" width="56" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwX-Tx-YAk">
+                        <rect key="frame" x="73" y="34" width="56" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="EbA-RO-SBM" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="0s9-DA-RBl"/>
+                    <constraint firstItem="EbA-RO-SBM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4qj-EO-VwL"/>
+                    <constraint firstItem="EbA-RO-SBM" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.18" id="9BS-8l-Kb6"/>
+                    <constraint firstItem="Yus-bJ-uc8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="IuX-lb-jRn"/>
+                    <constraint firstItem="fwX-Tx-YAk" firstAttribute="top" secondItem="Yus-bJ-uc8" secondAttribute="bottom" constant="1" id="R53-Ss-8Gs"/>
+                    <constraint firstItem="Yus-bJ-uc8" firstAttribute="leading" secondItem="EbA-RO-SBM" secondAttribute="trailing" constant="8" id="baX-T8-8ud"/>
+                    <constraint firstItem="EbA-RO-SBM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kUO-mF-7Za"/>
+                    <constraint firstItem="fwX-Tx-YAk" firstAttribute="leading" secondItem="EbA-RO-SBM" secondAttribute="trailing" constant="7.5" id="q1u-TK-bf6"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

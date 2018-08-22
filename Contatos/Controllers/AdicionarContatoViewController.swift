@@ -12,6 +12,8 @@ import CoreData
 class AdicionarContatoViewController: UIViewController {
 
     var usuario: Usuario?
+
+    var contato: Contato?
     
     @IBOutlet weak var img: UIImageView!
 
@@ -21,6 +23,11 @@ class AdicionarContatoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if contato != nil{
+            img.image = UIImage(data: contato?.foto as! Data)
+            nome.text = contato?.nome
+            telefone.text = contato?.telefone
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -40,13 +47,21 @@ class AdicionarContatoViewController: UIViewController {
 
     }
     func save() {
-        let context = DataManager.getContext()
-        let contato = Contato(context: context)
-        contato.nome = nome.text
-        contato.foto = UIImagePNGRepresentation(#imageLiteral(resourceName: "img")) as! NSData
-        contato.telefone = telefone.text
 
-        usuario?.addToContatos(contato)
+        let context = DataManager.getContext()
+        if self.contato == nil{
+
+            let contato = Contato(context: context)
+            contato.nome = nome.text
+            contato.foto = UIImagePNGRepresentation(#imageLiteral(resourceName: "img")) as! NSData
+            contato.telefone = telefone.text
+
+            usuario?.addToContatos(contato)
+        }else{
+            self.contato?.nome = nome.text
+            self.contato?.foto = UIImagePNGRepresentation(#imageLiteral(resourceName: "img")) as! NSData
+            self.contato?.telefone = telefone.text
+        }
 
         do {
             try context.save()

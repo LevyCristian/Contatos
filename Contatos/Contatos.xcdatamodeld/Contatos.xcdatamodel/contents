@@ -13,7 +13,7 @@
         <relationship name="contatos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contato" inverseName="usuario" inverseEntity="Contato" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contato" positionX="-252" positionY="639" width="128" height="105"/>
-        <element name="Usuario" positionX="-468" positionY="639" width="128" height="105"/>
+        <element name="Contato" positionX="-252" positionY="621" width="128" height="103"/>
+        <element name="Usuario" positionX="-468" positionY="621" width="128" height="103"/>
     </elements>
 </model>
