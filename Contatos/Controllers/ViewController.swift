@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     var selected: Usuario?
 
     override func viewDidLoad() {
-
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
